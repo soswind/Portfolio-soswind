@@ -2,9 +2,15 @@ import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useLoaderD
 import appStylesHref from "./app.css";
 import Nav from "./components/Nav";
 import { authenticator } from "./services/auth.server";
+import stylesheet from "./tailwind.css";
+import Profile from "./routes/profile";
+import Skills from "./routes/kompetencer";
+import Footer from "./routes/footer";
+import Experience from "./routes/experience";
 
 
-export const links = () => [{ rel: "stylesheet", href: appStylesHref }];
+export const links = () => [{ rel: "stylesheet", href: appStylesHref }, 
+{ rel: "stylesheet", href: stylesheet}];
 
 export async function loader({ request }) {
     return await authenticator.isAuthenticated(request );
@@ -22,11 +28,15 @@ const user = useLoaderData();
                 <Links />
             </head>
             <body>
-                {user ? <Nav /> : null}
+                <Nav />
+                <Profile />
+                <Skills />
+                <Experience />
                 <Outlet />
                 <ScrollRestoration />
                 <Scripts />
                 <LiveReload />
+                <Footer />
             </body>
         </html>
     );

@@ -24,7 +24,7 @@ html {
 
 body,
 html {
-  background-color: var(--light-green);
+  background-color: #F0EFE9;
   color: var(--text-color-dark);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -174,7 +174,7 @@ nav {
 /* Style the links inside the navigation bar */
 nav a {
   display: inline-block;
-  color: var(--text-color-light);
+  color: #fff;
   text-align: center;
   padding: 20px 16px;
   text-decoration: none;
@@ -189,20 +189,21 @@ nav a {
 
 /* Change the color of links on hover */
 nav a:hover {
-  background-color: var(--light-green);
-  color: var(--green);
+  background-color: #f9f9f9;
+  color: #000;
 }
 
 /* Add a color to the active/current link */
 nav a.active {
-  background-color: var(--light-green);
+  background-color: #dedede;
   color: var(--green);
 }
 
 /* ---------- Page Styling ---------- */
 .page {
   animation: fadeIn 0.5s;
-  padding: 105px 2em;
+  padding: 200px 2em;
+  max-width: 80%;
 }
 
 /* ---------- Animations ---------- */
@@ -333,7 +334,9 @@ nav a.active {
   
 }
 
-logout-button:hover {
+.logout-button:hover {
   background-color: var(--light-green);
   color: var(--green);
 }
+
+
