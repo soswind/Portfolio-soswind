@@ -5,5 +5,5 @@ export const meta = () => {
 };
 
 export async function loader() {
-  return redirect("/posts");
+  return redirect("/experience");
 }

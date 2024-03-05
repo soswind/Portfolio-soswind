@@ -1,16 +1,9 @@
-import { useLoaderData } from "@remix-run/react";
-import { authenticator } from "../services/auth.server";
 
-export async function loader({ request }) {
-  const user = await authenticator.isAuthenticated(request, {
-    failureRedirect: "/signin"
-  });
-  return user;
-}
+
+
 
 
 export default function Profile() {
-  const user = useLoaderData();
 
   return (
     <div className="md:flex md:space-x-6 p-4 md:p-6 pt-16 md:pt-32 mt-20 sm:mt-28 md:mt-0">
