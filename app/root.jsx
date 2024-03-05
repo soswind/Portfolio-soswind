@@ -6,7 +6,6 @@ import stylesheet from "./tailwind.css";
 import Profile from "./routes/profile";
 import Skills from "./routes/kompetencer";
 import Footer from "./routes/footer";
-import Experience from "./routes/experience";
 
 
 export const links = () => [{ rel: "stylesheet", href: appStylesHref }, 
@@ -31,7 +30,6 @@ const user = useLoaderData();
                 <Nav />
                 <Profile />
                 <Skills />
-                <Experience />
                 <Outlet />
                 <ScrollRestoration />
                 <Scripts />
