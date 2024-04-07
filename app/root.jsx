@@ -1,22 +1,17 @@
-import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData } from "@remix-run/react";
+import { Links, Link, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData } from "@remix-run/react";
 import appStylesHref from "./app.css";
 import Nav from "./components/Nav";
-import { authenticator } from "./services/auth.server";
 import stylesheet from "./tailwind.css";
 import Profile from "./routes/profile";
 import Skills from "./routes/kompetencer";
 import Footer from "./routes/footer";
+import Projects from "./routes/projects-overview";
 
 
 export const links = () => [{ rel: "stylesheet", href: appStylesHref }, 
 { rel: "stylesheet", href: stylesheet}];
 
-export async function loader({ request }) {
-    return await authenticator.isAuthenticated(request );
-}
-
 export default function App() {
-const user = useLoaderData();
 
     return (
         <html lang="en">
@@ -29,6 +24,7 @@ const user = useLoaderData();
             <body>
                 <Nav />
                 <Profile />
+                <Projects />
                 <Skills />
                 <Outlet />
                 <ScrollRestoration />

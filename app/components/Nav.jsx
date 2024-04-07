@@ -10,6 +10,9 @@ export default function Nav() {
 
   return (
     <nav className="flex justify-end p-4 bg-beige-200 text-white text-sm">
+      <a href="/experience" rel="noopener noreferrer" className="mx-2 text-xs text-black hover:text-brown-800 hover:bg-beige-100 border-none">
+        Forside
+      </a>
       <a href="https://www.linkedin.com/in/s%C3%B8s-wind-95a9a616b/" target="_blank" rel="noopener noreferrer" className="mx-2 text-xs text-black hover:text-brown-800 hover:bg-beige-100 border-none">
         <FaLinkedin size={20} />
       </a>
