@@ -13,7 +13,7 @@ export default function Projects() {
         <h2 className="text-center text-lg font-semibold p-2">AWU Exam Project</h2>
         <img src="exam-logo.png" className="w-full h-auto mb-4 md:mb-6 rounded-xl" />
         <div className="flex justify-center w-full">
-            <p className="font-m font-semibold p-2 bg:orange-500">Se projekt</p>
+            <p className="font-m font-small p-2 bg:orange-500">Individuelt eksamensprojekt i Avanceret Webudvikling. Udarbejdet i Remix og MongoDB.</p>
         </div>
     </a>
 </div>
